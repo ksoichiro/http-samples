@@ -18,6 +18,8 @@ $ go run hello.go -port 9000
 Serves HTTP in port 9000
 ```
 
+Quit: Ctrl + C.
+
 client:
 
 ```sh
