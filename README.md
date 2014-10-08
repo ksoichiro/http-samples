@@ -9,35 +9,38 @@ Golang HTTP server samples for my practice :smile:
 
 ## Usage
 
+### Hello world
+
 server:
 
 ```sh
-$ go run server.go
+$ go run hello.go -port 9000
+Serves HTTP in port 9000
 ```
 
 client:
 
 ```sh
-$ curl -v http://localhost:8080/foo
-* Adding handle: conn: 0x7fcab9003a00
+$ curl -v http://localhost:9000/hello
+* Adding handle: conn: 0x7fb7da003a00
 * Adding handle: send: 0
 * Adding handle: recv: 0
 * Curl_addHandleToPipeline: length: 1
-* - Conn 0 (0x7fcab9003a00) send_pipe: 1, recv_pipe: 0
-* About to connect() to localhost port 8080 (#0)
+* - Conn 0 (0x7fb7da003a00) send_pipe: 1, recv_pipe: 0
+* About to connect() to localhost port 9000 (#0)
 *   Trying ::1...
-* Connected to localhost (::1) port 8080 (#0)
-> GET /foo HTTP/1.1
+* Connected to localhost (::1) port 9000 (#0)
+> GET /hello HTTP/1.1
 > User-Agent: curl/7.30.0
-> Host: localhost:8080
+> Host: localhost:9000
 > Accept: */*
 > 
 < HTTP/1.1 200 OK
-< Date: Wed, 08 Oct 2014 16:37:48 GMT
-< Content-Length: 6
+< Date: Wed, 08 Oct 2014 17:06:55 GMT
+< Content-Length: 14
 < Content-Type: text/plain; charset=utf-8
 < 
-Hello
+Hello, world!
 * Connection #0 to host localhost left intact
 ```
 
