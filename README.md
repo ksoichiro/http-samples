@@ -2,6 +2,11 @@
 
 Golang HTTP server samples for my practice :smile:
 
+* Very easy!
+* Maybe you can use these samples
+  to write your own mock server
+  for mobile apps' CI and automated tests.
+
 ## Usage
 
 server:
